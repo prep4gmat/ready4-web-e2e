@@ -1,3 +1,4 @@
+import socialAuthenticationPage from './socialAuthenticationPage';
 const loginCommands = {
     login(email, pass) {
         return this
@@ -9,8 +10,8 @@ const loginCommands = {
     },
     forgetPassword() {
             return this
-                .waitForElementVisible('@forgetPassword',300)
-                .click('@forgetPassword')
+                .waitForElementVisible('@forgotPassword',300)
+                .click('@forgotPassword')
     },
     register() {
         return this
@@ -21,8 +22,8 @@ const loginCommands = {
 
 export default {
     url: 'https://ready4gmat-frontend-staging.herokuapp.com/login',
-    commands: [loginCommands],
-    elements: {
+    commands: [loginCommands, ...socialAuthenticationPage.commands],
+    elements:Object.assign( {
         loginContainer: {
             selector: '.login-container'
         },
@@ -35,11 +36,14 @@ export default {
         loginButton: {
             selector: 'button[type=submit]'
         },
-        forgetPassword:{
+        forgotPassword:{
             selector:'.forgot-password'
         },
         signUp:{
             selector:'.sign-in-register'
+        },
+        errorMessage:{
+            selector: '.error-message'
         }
-    }
+    },socialAuthenticationPage.elements)
 };
