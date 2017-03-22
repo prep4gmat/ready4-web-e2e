@@ -59,7 +59,7 @@ export default {
         loginPage.navigate().waitForElementVisible('@loginContainer', 300).expect.element('@forgotPassword').text.to.equal('Forgot Password?');
         loginPage.navigate().forgetPassword();
         //allow time for login to succeed
-        forgotPasswordPage.expect.element('@forgetPasswordContainer').to.be.visible.after(1000);
+        forgotPasswordPage.expect.element('@forgotPasswordContainer').to.be.visible.after(1000);
         client.end();
     },
 

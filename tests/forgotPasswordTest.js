@@ -34,7 +34,7 @@ export default {
         //allow time for login to succeed
         coursePage.expect.element('@courseContainer').to.be.visible.after(3000);
         forgotPasswordPage.navigate().forgotPassword(email);
-        resetPassword.expect.element('@resetPasswordContainer').to.be.visible.after(1000);
+        resetPassword.expect.element('@resetPasswordContainer').to.be.visible.after(4000);
         client.end();
     }
 };

@@ -24,7 +24,7 @@ export default {
         let email = `info+${moment().unix()}@ready4.com`;
         signUpPage.signUp('jonathan', 'yehie',email, 1234567);
         //allow time for login to succeed
-        coursePage.expect.element('@courseContainer').to.be.visible.after(3000);
+        coursePage.expect.element('@courseContainer').to.be.visible.after(4000);
         client.end();
     },
     'Check email sign up no email': (client) => {

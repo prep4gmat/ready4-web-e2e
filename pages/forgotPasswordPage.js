@@ -2,7 +2,7 @@
 const forgotPasswordCommands = {
     forgotPassword(email){
         return this
-            .waitForElementVisible('@forgotPasswordContainer',300)
+            .waitForElementVisible('@forgotPasswordContainer',500)
             .setValue('@emailInput', email)
             .waitForElementPresent('@forgotPasswordButton', 1000)
             .click('@forgotPasswordButton')
