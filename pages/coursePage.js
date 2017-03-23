@@ -9,6 +9,12 @@ export default {
         },
         courseAnalyticsContainer:{
             selector: '.course-analytics-container'
+        },
+        snakeContainer:{
+            selector:'.snake-container'
+        },
+        snakeRowElement:{
+            selector:'[id^="snakeRowElement"]'
         }
     }
 };

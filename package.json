@@ -13,9 +13,9 @@
     "babel-cli": "^6.11.4",
     "babel-core": "^6.11.4",
     "babel-loader": "6.2.4",
-    "nightwatch": "^0.9.12",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",
+    "nightwatch": "^0.9.12",
     "selenium-standalone": "^5.9.1"
   },
   "dependencies": {
